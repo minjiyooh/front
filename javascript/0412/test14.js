@@ -40,5 +40,5 @@ num += "Math.random() * 10 => " + Math.random() * 10;
 // num = parseInt(Math.random() * 10) + 1;
 num = parseInt(Math.random() * 45) + 1;
 num = parseInt(Math.random() * (15-5+1)) + 5;
-
+g
 demo.innerHTML = num;
