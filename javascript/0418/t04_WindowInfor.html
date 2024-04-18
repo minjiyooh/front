@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,25 +18,23 @@
       str += '화면 해상도 세로크기 : ' + window.screen.height + "px<br/>";
       str += '화면 작업영역 가로크기 : ' + window.screen.availWidth + "px<br/>";
       str += '화면 작업영역 세로크기 : ' + window.screen.availHeight + "px<br/>";
-      str += '표현 가능 색상수 " ' + Math.pow(2,screen.colorDepth) + "<br/>";
-      str += '픽셀당 표현 가능 색상수 " ' + Math.pow(2,screen.pixelDepth) + "<br/>";
+      str += '표현 가능 색상수 : ' + Math.pow(2, screen.colorDepth) + "<br/>";
+      str += '픽셀당 표현 가능 색상수 : ' + Math.pow(2, screen.pixelDepth) + "<br/>";
 
       demo.innerHTML = str;
     }
   </script>
 </head>
-
 <body>
-  <p><br /></p>
-  <div class="container">
-    <h2>윈도우 정보보기(screen객체)</h2>
-    <hr />
-    <div>
-      <input type="button" value="위도우정보보기" onclick="windowCheck()" class="btn btn-success" />
-    </div>
-    <hr />
-    <div id="demo"></div>
+<p><br/></p>
+<div class="container">
+  <h2>윈도우 정보보기(screen객체)</h2>
+  <hr/>
+  <div>
+    <input type="button" value="위도우정보보기" onclick="windowCheck()" class="btn btn-success"/>
   </div>
+  <hr/>
+  <div id="demo"></div>
+</div>
 </body>
-
 </html>
