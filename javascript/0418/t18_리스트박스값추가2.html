@@ -22,7 +22,7 @@
 
       let productText = '';
       let productValue = '';
-      let ppp = "오디오";
+      let ppp = document.getElementById("product").value;
 
       let product = ['냉장고', '오디오', '선풍기', '에어컨'];
       if (ppp == product[0]) {
@@ -48,7 +48,16 @@
   <p><br /></p>
   <div class="container">
     <form name="myform">
-      <div>상품명 : <input type="button" value="컬러추가" onclick="fCheck()" class="btn btn-success mb-3" />
+      <div>상품명
+        <select name="product" onchange="fCheck()" class="form-control">
+          <option>상품선택</option>
+          <option>냉장고</option>
+          <option>오디오</option>
+          <option>선풍기</option>
+          <option>에어컨</option>
+        </select>
+      </div>
+      <div>
         <select name="product" id="product" class="form-control">
           <option value="">상품선택</option>
         </select>
