@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,48 +21,54 @@
 
       let productText = '';
       let productValue = '';
-      let ppp = document.getElementById("product").value;
+      let ppp = document.getElementById("proc").value;
 
-      let product = ['냉장고', '오디오', '선풍기', '에어컨'];
-      if (ppp == product[0]) {
-        productText = ["냉장고1", "냉장고2", "냉장고3", "냉장고4"];
-        productValue = [10000, 5000, 2000, 15000];
+      let product = ['냉장고','오디오','선풍기','에어컨'];
+      if(ppp == product[0]) {
+        productText = ["냉장고1","냉장고2","냉장고3","냉장고4"];
+        productValue = [10000,5000,2000,15000];
       }
-      else if (ppp == product[1]) {
-        productText = ["오디오1", "오디오2", "오디오3", "오디오4"];
-        productValue = [10000, 5000, 2000, 15000];
+      else if(ppp == product[1]) {
+        productText = ["오디오1","오디오2","오디오3","오디오4"];
+        productValue = [10000,5000,2000,15000];
+      }
+      else if(ppp == product[2]) {
+        productText = ["선풍기1","선풍기2","선풍기3","선풍기4"];
+        productValue = [10000,5000,2000,15000];
+      }
+      else if(ppp == product[3]) {
+        productText = ["에어컨1","에어컨2","에어컨3","에어컨4"];
+        productValue = [10000,5000,2000,15000];
       }
 
 
       let str = '<option>상품선택</option>';
-      for (let i = 0; i < product.length; i++) {
-        str += `<option value="${productValue[i]}">${productText[i]}</option>`
+      for(let i=0; i<product.length; i++) {
+        str += `<option value="${productValue[i]}">${productText[i]}</option>`;
       }
       document.getElementById("product").innerHTML = str;
     }
   </script>
 </head>
-
 <body>
-  <p><br /></p>
-  <div class="container">
-    <form name="myform">
-      <div>상품명
-        <select name="product" onchange="fCheck()" class="form-control">
-          <option>상품선택</option>
-          <option>냉장고</option>
-          <option>오디오</option>
-          <option>선풍기</option>
-          <option>에어컨</option>
-        </select>
-      </div>
-      <div>
-        <select name="product" id="product" class="form-control">
-          <option value="">상품선택</option>
-        </select>
-      </div>
-    </form>
-  </div>
+<p><br/></p>
+<div class="container">
+  <form name="myform">
+    <div>상품명
+      <select name="product" id="proc" onchange="fCheck()" class="form-control mb-3">
+        <option>상품선택</option>
+        <option>냉장고</option>
+        <option>오디오</option>
+        <option>선풍기</option>
+        <option>에어컨</option>
+      </select>
+    </div>
+    <div>
+      <select name="product" id="product" class="form-control">
+        <option value="">옵션선택</option>
+      </select>
+    </div>
+  </form>
+</div>
 </body>
-
 </html>
