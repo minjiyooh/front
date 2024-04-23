@@ -11,8 +11,37 @@
   <script>
     'use strict';
 
-    
-    $('#nations thead').css('backgroundColor', 'skyblue');
+    $(() => {
+      $('#nations thead').css('backgroundColor', 'skyblue');
+      $('#nations thead, #nations tbody').css('textAlign', 'center');
+      // $('#nations tbody').css('textAlign', 'center');
+      // $('#nations tbody').css('backgroundColor', 'lightgray');
+      $('#nations tbody tr:first').css('backgroundColor', 'lightgray');
+      $('#nations tbody tr:last').css('backgroundColor', 'lightgray');
+      $('#nations tbody tr:nth-child(2)').css('backgroundColor', 'red');
+      $('#nations tbody tr:nth-child(2n)').css('backgroundColor', 'pink');
+      $('#nations tbody tr:nth-child(2n-1)').css('backgroundColor', 'yellow');
+      $('#nations tbody tr:nth-child(odd)').css('backgroundColor', 'green');
+      $('#nations tbody tr:nth-child(even)').css('backgroundColor', 'orange');
+      $('#nations tbody tr:nth-child(3n)').css('backgroundColor', 'brown');
+      $('#nations tbody tr td').css('backgroundColor', '#eee');
+
+      // 문자 포함유무? contains()
+      // 입력된 자료중에서 '국'을 포함하고 있는 셀에 대하여 배경색을 orange색으로 덮으시오.
+      $('#nations tbody tr td:contains("국")').css("backgroundColor", "orange");
+
+      // 공백체크 : empty()
+      $('#nations tbody tr td:empty()').css("backgroundColor", "red");
+
+      // 태그의 포함유무? has()
+      $('#nations tbody td:has("b")').css("backgroundColor", "blue");
+
+      // 10번째 행 감추기 : hide()
+      $('#nations tbody tr:nth-child(10)').hide();
+      
+      $('#nations tbody td:contains("국")').parent().hide();
+
+    });
   </script>
 </head>
 <body>
@@ -41,7 +70,7 @@
         <tr><td>11</td><td>자메이카</td><td>킹스턴</td></tr>
         <tr><td>12</td><td>나미비아</td><td>빈트후크</td></tr>
         <tr><td>13</td><td>동티모르</td><td>딜리</td></tr>
-        <tr><td>14</td><td>멕시코</td><td>멕시코시티</td></tr>
+        <tr><td>14</td><td>멕시코</td><td><b>멕시코시티</b></td></tr>
         <tr><td>15</td><td>베네수엘라</td><td>카라카스</td></tr>
         <tr><td>16</td><td>서사모아</td><td>아피아</td></tr>
         <tr><td>17</td><td><b>대한민국</b></td><td>서울</td></tr>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +40,13 @@
       //   mouseenter : function() {$(this).css("backgroundColor", "skyblue");}
       // });
 
-      $(".inner").on('click', function () { $(this).css("backgroundColor", "pink"); })
-      .on('mouseleave', function () { $(this).css("backgroundColor", "green"); })
-      .on('mouseenter', function () { $(this).css("backgroundColor", "skyblue"); })
+      // $(".inner").on('click', function() {$(this).css("backgroundColor", "pink");})
+      // $(".inner").on('mouseleave', function() {$(this).css("backgroundColor", "green");})
+      // $(".inner").on('mouseenter', function() {$(this).css("backgroundColor", "skyblue");})
+
+      $(".inner").on('click', function() {$(this).css("backgroundColor", "pink");})
+        .on('mouseleave', function() {$(this).css("backgroundColor", "green");})
+        .on('mouseenter', function() {$(this).css("backgroundColor", "skyblue");})
     });
   </script>
   <style>
@@ -52,7 +55,6 @@
       height: 300px;
       background-color: yellow;
     }
-
     .inner {
       width: 200px;
       height: 200px;
@@ -60,15 +62,13 @@
     }
   </style>
 </head>
-
 <body>
-  <p><br /></p>
-  <div class="container">
-    <hr />
-    <div class="outer">
-      <div class="inner"></div>
-    </div>
+<p><br/></p>
+<div class="container">
+  <hr/>
+  <div class="outer">
+    <div class="inner"></div>
   </div>
+</div>
 </body>
-
 </html>
